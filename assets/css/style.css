@@ -439,4 +439,7 @@ footer {
   table {
     min-width: 520px;
   }
+  .logo_img{
+    background-image: url("../img/print_transparent-cropped%20(2).svg");
+  }
 }
