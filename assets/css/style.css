@@ -27,6 +27,8 @@ body {
 }
 .logo_img{
     background-image: url("../img/print_transparent-cropped%20(2).svg");
+    background-repeat: no-repeat;
+    background-size: auto;
   }
 
 img {
