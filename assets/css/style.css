@@ -416,6 +416,9 @@ footer {
   .navbar {
     flex-wrap: wrap;
   }
+  .hero h1{
+    color: yellow;
+  }
 
   .nav-links {
     width: 100%;
