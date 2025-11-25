@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICS Sitemap and designer prompt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <a class="logo" href="/"><span>ICS</span> Island Computing Services</a>
+      <button class="mobile-toggle" aria-label="Toggle navigation">☰</button>
+      <ul class="nav-links">
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/resources/">Resources</a></li>
+        <li><a href="/company/">Company</a></li>
+        <li><a href="/company/contact/">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="/signin/">Sign in</a>
+        <a class="btn btn-primary" href="/signup/">Try for free</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero">
+      <div>
+        <div class="badge">Sitemap</div>
+        <h1>Site structure at a glance.</h1>
+        <p class="lead">Primary navigation, secondary pages, and utility destinations in a simple table format.</p>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Primary navigation and core pages</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Nav label</th><th>URL</th><th>Page role / type</th><th>Key content blocks</th><th>Primary CTAs</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Home</td><td>/</td><td>Main marketing landing</td><td>Hero, Ask-anything box, Why ICS, Products overview, ICS ecosystem, Narrative/credibility, Pre-footer demo block</td><td>Try for free, Request demo, Contact</td></tr>
+            <tr><td>Products</td><td>/products</td><td>Product overview hub</td><td>Short intro, Compute summary, Database summary, Storage summary, links to detail pages</td><td>View product details, Talk to sales</td></tr>
+            <tr><td>Pricing</td><td>/pricing</td><td>Pricing overview + calculator</td><td>Pricing model summary, per-product pricing sections, pricing calculator, free tier/credits, pricing FAQ</td><td>Estimate cost, Talk to sales/demo</td></tr>
+            <tr><td>Resources</td><td>/resources</td><td>Learning & help hub</td><td>Cards/links to Blog, Docs, Guides, Community, Contact/Support</td><td>View docs, Join community, Contact</td></tr>
+            <tr><td>Company</td><td>/company</td><td>Company overview hub</td><td>Mission/vision, ICS story, milestones, links to about/team/careers/press/trust</td><td>Learn more, View careers, Contact</td></tr>
+            <tr><td>Contact</td><td>/company/contact</td><td>Core contact page</td><td>General contact form, sales/demo contact, support contact</td><td>Submit form, Email sales/support</td></tr>
+            <tr><td>Sign in</td><td>/signin</td><td>Auth entry</td><td>Login form</td><td>Sign in</td></tr>
+            <tr><td>Try for free</td><td>/signup</td><td>Free trial / account signup</td><td>Signup form, brief reminder of value + free credits</td><td>Create account, Start free trial</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Secondary pages and utility pages</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Parent section</th><th>URL</th><th>Purpose / content focus</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Products</td><td>/products/compute</td><td>Details of compute offering: instance types, islands concept, networking+security included, key limits.</td></tr>
+            <tr><td>Products</td><td>/products/database</td><td>Managed DB engines, backup/HA story, scaling, connection model, basic pricing summary.</td></tr>
+            <tr><td>Products</td><td>/products/storage</td><td>Block/object storage overview, durability, redundancy, performance tiers, basic pricing summary.</td></tr>
+            <tr><td>Pricing</td><td>/pricing#compute</td><td>Anchor section: per-tier compute pricing table + notes.</td></tr>
+            <tr><td>Pricing</td><td>/pricing#database</td><td>Anchor section: DB instance/storage/backups pricing.</td></tr>
+            <tr><td>Pricing</td><td>/pricing#storage</td><td>Anchor section: storage per-GB/month, egress, etc.</td></tr>
+            <tr><td>Resources</td><td>/blog</td><td>Long-form narratives: ICS origin, Indian cloud narrative, “Simplifying computing” series, product posts.</td></tr>
+            <tr><td>Resources</td><td>/docs</td><td>Developer docs: Getting started, Compute, Database, Storage.</td></tr>
+            <tr><td>Resources</td><td>/guides</td><td>Step-by-step guides: migrate from hyperscalers, set up dev/stage/prod islands, etc.</td></tr>
+            <tr><td>Resources</td><td>/community</td><td>Links + copy for Discord, LinkedIn, X.</td></tr>
+            <tr><td>Company</td><td>/company/about</td><td>Expanded “who we are”: founders’ background, why ICS exists, vision & mission.</td></tr>
+            <tr><td>Company</td><td>/company/team</td><td>Team bios: founders (initially), later leadership.</td></tr>
+            <tr><td>Company</td><td>/company/careers</td><td>Job listings, role cards, how to apply.</td></tr>
+            <tr><td>Company</td><td>/company/press</td><td>Press kit: logos, brand info, press contact.</td></tr>
+            <tr><td>Company</td><td>/company/trust</td><td>Trust/security: data residency, security posture, compliance info.</td></tr>
+            <tr><td>Company</td><td>/company/contact</td><td>Core contact page.</td></tr>
+            <tr><td>Global footer</td><td>/status</td><td>System status page.</td></tr>
+            <tr><td>Global footer</td><td>/terms</td><td>Terms of service.</td></tr>
+            <tr><td>Global footer</td><td>/privacy</td><td>Privacy policy.</td></tr>
+            <tr><td>Global footer</td><td>/cookies</td><td>Cookie policy / preferences.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>Prompt for designers/devs</h2>
+      <p class="lead">Copy and adapt this prompt when briefing designers, developers, or generators.</p>
+      <div class="callout">
+        <p>You are designing and building a responsive marketing website for a new cloud provider called Island Computing Services (ICS). ICS is an Indian, developer-first cloud focused on simplicity and transparent pricing. Implement the specified navigation, structure, and UX, optimized for clarity and low friction.</p>
+        <p><strong>Brand + general UX</strong>: clean, modern, minimal, easy to scan. Make actions visible and repeated: Try for free, Request demo, Contact. Fully responsive.</p>
+        <p><strong>Global header</strong>: Logo linking home; nav items Products, Pricing, Resources, Company, Contact; right-side Sign in + Try for free; hamburger on mobile.</p>
+        <p><strong>Home</strong>: hero, ask-anything box, Why ICS tiles, products overview, ecosystem links, narrative/credibility, pre-footer CTA, footer.</p>
+        <p><strong>Products</strong>: /products hub plus detail pages for compute, database, storage with features, use cases, pricing teaser, and links to pricing anchors.</p>
+        <p><strong>Pricing</strong>: transparent sections with #compute, #database, #storage tables, calculator with vCPUs/RAM/storage/egress, free credits, FAQ, CTA row.</p>
+        <p><strong>Resources</strong>: hub linking to blog, docs, guides, community; include “Still need help?” pointing to contact.</p>
+        <p><strong>Company</strong>: mission/vision, story, milestones, cards linking to About, Team, Careers, Press, Trust, Contact.</p>
+        <p><strong>Utility/footer</strong>: status, legal pages, and consistent pre-footer CTA across pages. Maintain semantic HTML and accessible markup.</p>
+      </div>
+    </section>
+
+    <section class="section pre-footer">
+      <div>
+        <h2>Ready to simplify your cloud?</h2>
+        <p>Start with free credits or talk to our team for a guided walkthrough.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn-primary" href="/signup/">Try for free</a>
+        <a class="btn btn-secondary" href="/company/contact/">Request a demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>Products</h4>
+        <a href="/products/compute/">Compute</a>
+        <a href="/products/database/">Database</a>
+        <a href="/products/storage/">Storage</a>
+      </div>
+      <div class="footer-column">
+        <h4>Developers</h4>
+        <a href="/docs/">Docs</a>
+        <a href="/guides/">Guides</a>
+        <a href="/pricing/#calculator">Pricing calculator</a>
+        <a href="#">API reference</a>
+      </div>
+      <div class="footer-column">
+        <h4>Company</h4>
+        <a href="/company/about/">About</a>
+        <a href="/company/team/">Team</a>
+        <a href="/company/careers/">Careers</a>
+        <a href="/company/press/">Press</a>
+        <a href="/company/contact/">Contact</a>
+        <a href="/company/trust/">Trust</a>
+      </div>
+      <div class="footer-column">
+        <h4>Ecosystem</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">X</a>
+        <a href="#">Discord</a>
+        <a href="/blog/">Blog</a>
+        <a href="/sitemap/">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2024 Island Computing Services</div>
+      <div class="list-inline" style="padding:0;margin:0;gap:8px;">
+        <li><a href="/terms/">Terms</a></li>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/cookies/">Cookies</a></li>
+        <li><a href="/status/">Status</a></li>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
