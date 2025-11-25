@@ -25,6 +25,9 @@ body {
   background: var(--bg);
   line-height: 1.6;
 }
+.logo_img{
+    background-image: url("../img/print_transparent-cropped%20(2).svg");
+  }
 
 img {
   max-width: 100%;
@@ -439,7 +442,5 @@ footer {
   table {
     min-width: 520px;
   }
-  .logo_img{
-    background-image: url("../img/print_transparent-cropped%20(2).svg");
-  }
+  
 }
