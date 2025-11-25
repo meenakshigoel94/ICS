@@ -28,7 +28,7 @@ body {
 .logo_img{
     background-image: url("../img/print_transparent-cropped%20(2).svg");
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contains;
   }
 
 img {
@@ -415,9 +415,6 @@ footer {
 @media (max-width: 900px) {
   .navbar {
     flex-wrap: wrap;
-  }
-  .hero h1{
-    color: yellow;
   }
 
   .nav-links {
