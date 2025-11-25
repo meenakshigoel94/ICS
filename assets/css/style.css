@@ -25,18 +25,11 @@ body {
   background: var(--bg);
   line-height: 1.6;
 }
-.logo_img {
-  width: 140px;
-  height: 48px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.logo_img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+.logo_img{
+    background-image: url("../img/print_transparent-cropped%20(2).svg");
+    background-repeat: no-repeat;
+    background-size: contains;
+  }
 
 img {
   max-width: 100%;
