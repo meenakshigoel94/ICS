@@ -61,25 +61,14 @@ header {
 }
 
 .logo {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
 }
 
-.logo span {
-  display: inline-flex;
-  width: 36px;
+.logo img {
   height: 36px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-weight: 800;
-  font-size: 18px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
