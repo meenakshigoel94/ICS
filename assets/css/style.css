@@ -156,11 +156,18 @@ main {
   gap: 16px;
 }
 
+.hero > div:first-child {
+  text-align: center;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
 .hero h1 {
   font-size: 38px;
   margin: 0;
   letter-spacing: -0.03em;
-  color: red;
+  color: #ee8119;
 }
 
 .hero-actions {
@@ -168,6 +175,7 @@ main {
   gap: 12px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .card-grid {
