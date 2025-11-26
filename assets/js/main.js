@@ -7,6 +7,23 @@ if (navToggle && navLinks) {
   });
 }
 
+const askBox = document.querySelector('.search-box');
+
+if (askBox) {
+  const askInput = askBox.querySelector('input');
+  const askButton = askBox.querySelector('button');
+
+  const toggleAskButton = () => {
+    if (!askButton || !askInput) return;
+    askButton.disabled = askInput.value.trim().length === 0;
+  };
+
+  if (askInput) {
+    askInput.addEventListener('input', toggleAskButton);
+    toggleAskButton();
+  }
+}
+
 const calcForm = document.querySelector('.calc-form');
 if (calcForm) {
   const resultEl = document.querySelector('.calc-result');
