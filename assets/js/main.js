@@ -33,32 +33,26 @@ if (whyCarousel) {
   const nextBtn = whyCarousel.querySelector('.carousel-arrow.right');
   const cards = track?.querySelectorAll('.why-card');
 
-  const getStep = () => {
-    if (!cards || cards.length === 0 || !track) return 0;
-    const styles = getComputedStyle(track);
-    const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;
-    return cards[0].getBoundingClientRect().width + gap;
+  let currentIndex = 0;
+
+  const scrollToIndex = (index) => {
+    if (!windowEl || !track || !cards || cards.length === 0) return;
+    const normalizedIndex = (index + cards.length) % cards.length;
+    currentIndex = normalizedIndex;
+    const targetCard = cards[normalizedIndex];
+    const offset = targetCard.offsetLeft - track.offsetLeft;
+    windowEl.scrollTo({ left: offset, behavior: 'smooth' });
   };
 
-  const updateArrows = () => {
-    if (!windowEl || !track || !prevBtn || !nextBtn) return;
-    const maxScroll = track.scrollWidth - windowEl.clientWidth;
-    const current = windowEl.scrollLeft;
-    prevBtn.disabled = current <= 0;
-    nextBtn.disabled = current >= maxScroll - 1;
+  const stepIndex = (direction) => {
+    if (!cards || cards.length === 0) return;
+    scrollToIndex(currentIndex + direction);
   };
 
-  const scrollByStep = (direction) => {
-    const step = getStep();
-    if (!windowEl || step === 0) return;
-    windowEl.scrollBy({ left: step * direction, behavior: 'smooth' });
-  };
-
-  prevBtn?.addEventListener('click', () => scrollByStep(-1));
-  nextBtn?.addEventListener('click', () => scrollByStep(1));
-  windowEl?.addEventListener('scroll', updateArrows);
-  window.addEventListener('resize', updateArrows);
-  updateArrows();
+  prevBtn?.addEventListener('click', () => stepIndex(-1));
+  nextBtn?.addEventListener('click', () => stepIndex(1));
+  window.addEventListener('resize', () => scrollToIndex(currentIndex));
+  scrollToIndex(0);
 }
 
 const calcForm = document.querySelector('.calc-form');
