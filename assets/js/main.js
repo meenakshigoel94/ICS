@@ -10,7 +10,7 @@ if (navToggle && navLinks) {
 const askBox = document.querySelector('.search-box');
 
 if (askBox) {
-  const askInput = askBox.querySelector('input');
+  const askInput = askBox.querySelector('textarea, input');
   const askButton = askBox.querySelector('button');
 
   const toggleAskButton = () => {
