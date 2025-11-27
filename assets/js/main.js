@@ -24,6 +24,43 @@ if (askBox) {
   }
 }
 
+const whyCarousel = document.querySelector('.why-carousel');
+
+if (whyCarousel) {
+  const windowEl = whyCarousel.querySelector('.carousel-window');
+  const track = whyCarousel.querySelector('.carousel-track');
+  const prevBtn = whyCarousel.querySelector('.carousel-arrow.left');
+  const nextBtn = whyCarousel.querySelector('.carousel-arrow.right');
+  const cards = track?.querySelectorAll('.why-card');
+
+  const getStep = () => {
+    if (!cards || cards.length === 0 || !track) return 0;
+    const styles = getComputedStyle(track);
+    const gap = parseFloat(styles.columnGap || styles.gap || '0') || 0;
+    return cards[0].getBoundingClientRect().width + gap;
+  };
+
+  const updateArrows = () => {
+    if (!windowEl || !track || !prevBtn || !nextBtn) return;
+    const maxScroll = track.scrollWidth - windowEl.clientWidth;
+    const current = windowEl.scrollLeft;
+    prevBtn.disabled = current <= 0;
+    nextBtn.disabled = current >= maxScroll - 1;
+  };
+
+  const scrollByStep = (direction) => {
+    const step = getStep();
+    if (!windowEl || step === 0) return;
+    windowEl.scrollBy({ left: step * direction, behavior: 'smooth' });
+  };
+
+  prevBtn?.addEventListener('click', () => scrollByStep(-1));
+  nextBtn?.addEventListener('click', () => scrollByStep(1));
+  windowEl?.addEventListener('scroll', updateArrows);
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
+}
+
 const calcForm = document.querySelector('.calc-form');
 if (calcForm) {
   const resultEl = document.querySelector('.calc-result');
