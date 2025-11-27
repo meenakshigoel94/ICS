@@ -10,7 +10,7 @@ if (navToggle && navLinks) {
 const askBox = document.querySelector('.search-box');
 
 if (askBox) {
-  const askInput = askBox.querySelector('input');
+  const askInput = askBox.querySelector('textarea, input');
   const askButton = askBox.querySelector('button');
 
   const toggleAskButton = () => {
@@ -22,6 +22,37 @@ if (askBox) {
     askInput.addEventListener('input', toggleAskButton);
     toggleAskButton();
   }
+}
+
+const whyCarousel = document.querySelector('.why-carousel');
+
+if (whyCarousel) {
+  const windowEl = whyCarousel.querySelector('.carousel-window');
+  const track = whyCarousel.querySelector('.carousel-track');
+  const prevBtn = whyCarousel.querySelector('.carousel-arrow.left');
+  const nextBtn = whyCarousel.querySelector('.carousel-arrow.right');
+  const cards = track?.querySelectorAll('.why-card');
+
+  let currentIndex = 0;
+
+  const scrollToIndex = (index) => {
+    if (!windowEl || !track || !cards || cards.length === 0) return;
+    const normalizedIndex = (index + cards.length) % cards.length;
+    currentIndex = normalizedIndex;
+    const targetCard = cards[normalizedIndex];
+    const offset = targetCard.offsetLeft - track.offsetLeft;
+    windowEl.scrollTo({ left: offset, behavior: 'smooth' });
+  };
+
+  const stepIndex = (direction) => {
+    if (!cards || cards.length === 0) return;
+    scrollToIndex(currentIndex + direction);
+  };
+
+  prevBtn?.addEventListener('click', () => stepIndex(-1));
+  nextBtn?.addEventListener('click', () => stepIndex(1));
+  window.addEventListener('resize', () => scrollToIndex(currentIndex));
+  scrollToIndex(0);
 }
 
 const calcForm = document.querySelector('.calc-form');
