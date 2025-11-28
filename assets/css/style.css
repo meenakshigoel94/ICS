@@ -196,6 +196,11 @@ main {
   object-fit: cover;
 }
 
+.hero-visual img {
+  max-width: 100%;
+  height: auto;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
