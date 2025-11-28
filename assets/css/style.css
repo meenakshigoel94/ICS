@@ -173,7 +173,7 @@ main {
   font-size: 38px;
   margin: 0;
   letter-spacing: -0.03em;
-  color: #03cd73;
+  color: #0c3d73;
 }
 
 .hero-actions {
@@ -194,11 +194,6 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.hero-visual img {
-  max-width: 100%;
-  height: auto;
 }
 
 .card-grid {
