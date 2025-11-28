@@ -108,12 +108,12 @@ header {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: #ee8119;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark);
+  background: #cf6d14;
 }
 
 .btn-secondary {
@@ -169,7 +169,7 @@ main {
   font-size: 38px;
   margin: 0;
   letter-spacing: -0.03em;
-  color: #ee8119;
+  color: #1c64f2;
 }
 
 .hero-actions {
