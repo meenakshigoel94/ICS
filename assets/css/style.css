@@ -108,12 +108,12 @@ header {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: #ee8119;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark);
+  background: #cf6d14;
 }
 
 .btn-secondary {
@@ -147,27 +147,33 @@ main {
   margin-top: 0;
 }
 
+
 .hero {
-  background: var(--card);
-  padding: 48px;
+  background: #fffef3;
+  padding: 0;
   border-radius: 24px;
   box-shadow: var(--shadow);
   display: grid;
-  gap: 16px;
+  column-gap: 16px;
+  row-gap: 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: stretch;
+  overflow: hidden;
 }
 
-.hero > div:first-child {
-  text-align: center;
+.hero-content {
+  padding: 48px;
+  text-align: left;
   display: grid;
   gap: 12px;
-  justify-items: center;
+  justify-items: start;
 }
 
 .hero h1 {
   font-size: 38px;
   margin: 0;
   letter-spacing: -0.03em;
-  color: #ee8119;
+  color: #03cd73;
 }
 
 .hero-actions {
@@ -175,7 +181,19 @@ main {
   gap: 12px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-visual {
+  display: flex;
   justify-content: center;
+  align-items: stretch;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-grid {
