@@ -154,13 +154,14 @@ main {
   box-shadow: var(--shadow);
   display: grid;
   gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
 }
 
-.hero > div:first-child {
-  text-align: center;
+.hero-content {
+  text-align: left;
   display: grid;
   gap: 12px;
-  justify-items: center;
 }
 
 .hero h1 {
@@ -175,7 +176,17 @@ main {
   gap: 12px;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-visual {
+  display: flex;
   justify-content: center;
+}
+
+.hero-visual img {
+  max-width: 100%;
+  height: auto;
 }
 
 .card-grid {
